@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundAngleFrameLayout">
+        <attr name="radius" format="dimension" />
+        <attr name="topLeftRadius" format="dimension" />
+        <attr name="topRightRadius" format="dimension" />
+        <attr name="bottomLeftRadius" format="dimension" />
+        <attr name="bottomRightRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="TagCloudLayout">
+        <attr name="lineSpacing" format="dimension" />
+        <attr name="tagSpacing" format="dimension" />
+        <!-- 是否是固定布局 -->
+        <attr name="isFixed" format="boolean" />
+        <attr name="isCenterHorizontal" format="boolean" />
+        <attr name="columnSize" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="CouponDisplayView">
+        <attr name="coupon_gap" format="dimension" />
+        <attr name="coupon_radius" format="dimension" />
+        <attr name="coupon_circle_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="GradualRadioButton">
+        <attr name="gradual_color" format="color" />
+        <attr name="gradual_icon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FontTextView">
+        <attr name="font_path" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="TopBar">
+        <attr name="showRightView" format="boolean" />
+        <attr name="showLeftView" format="boolean" />
+        <attr name="showTitle" format="boolean" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="titleText" format="string" />
+        <attr name="right_view_text" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="IRecyclerView">
+        <attr name="refreshHeaderLayout" format="reference" />
+        <attr name="loadMoreFooterLayout" format="reference" />
+        <attr name="refreshEnabled" format="boolean" />
+        <attr name="loadMoreEnabled" format="boolean" />
+        <attr name="refreshFinalMoveOffset" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="HorizontalListView">
+        <attr name="hori_listview_dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+</resources>

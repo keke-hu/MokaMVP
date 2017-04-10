@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">买萌模卡</string>
+    <string name="action_settings">Settings</string>
+    <string name="pintu">拼图</string>
+    <string name="pintu_info">请添加5-8张图片</string>
+    <string name="server_data_error">数据出错</string>
+    <string name="pic_nums">图片数量：%s</string>
+    <string name="sex">性别</string>
+    <string name="sex_man">男</string>
+    <string name="sex_woman">女</string>
+    <string name="loading">加载中</string>
+    <string name="recommend">发现一款免费的专业模卡制作工具，推荐给您~</string>
+    <string name="recommend_url">http://t.mmote.cn/appdown20</string>
+    <string name="share">分享</string>
+    <string name="error">服务器出错，请稍后再试~</string>
+    <string name="love_numbers">1.上传模卡并分享互动页面给好友，当好友给你点满%s个爱心</string>
+    <string name="storage_permission">请确认买萌模卡是否申请了存储权限</string>
+    <string name="storage_disable">请插入内存卡</string>
+    <string name="image_error">获取图片出错</string>
+    <string name="process_error">出错了，请返回重新制作</string>
+    <string name="shot_price" formatted="false">￥%s/%s</string>
+    <string name="height">%scm</string>
+    <string name="weight">%skg</string>
+    <string name="notice_note">1 . 我们最晚将在截止报名时间当天通过微信或电话通知被录取的模特\n2.  被录取后无故爽约，往后将被禁止通告报名功能</string>
+    <string name="view_number" formatted="false">共%s人浏览</string>
+    <string name="view_number_new" formatted="false">共%s人浏览\n新增%s人</string>
+</resources>

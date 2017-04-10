@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_moka_info"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+
+    <LinearLayout
+        android:id="@+id/ll_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_name"
+            style="@style/moka_infor_portrait_tv"
+            android:maxLength="5"
+            android:text="安安"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_4" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_height"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_first_margin_top"
+            android:text="身高|HEIGHT" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_height_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+            android:text="172" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_weight"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_title_margin_top"
+            android:text="体重|WEIGHT" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_weight_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+
+            android:text="50" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_bust"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_title_margin_top"
+            android:text="胸围|BUST" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_bust_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+            android:text="85" />
+
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_waist"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_title_margin_top"
+            android:text="腰围|WAIST" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_waist_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+            android:text="67" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_hips"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_title_margin_top"
+            android:text="臀围|HIPS" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_hips_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+            android:text="87" />
+
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_shoe_size"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_title_margin_top"
+            android:text="鞋码|SHOES" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_shoe_size_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+            android:text="35" />
+
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_phone"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_title_margin_top"
+            android:text="手机|PHONE" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_phone_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+            android:inputType="phone"
+            android:text="12222555859" />
+
+
+        <ImageView
+            android:id="@+id/iv_qr"
+            android:layout_width="@dimen/qr_width"
+            android:layout_height="@dimen/qr_width"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+</RelativeLayout>

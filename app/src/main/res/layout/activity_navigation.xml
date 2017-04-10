@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_4"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.33dp"
+        android:background="#0CFFFFFF" />
+
+    <LinearLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="@color/color_4"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_moka"
+            style="@style/rl_tab">
+
+            <TextView
+                android:id="@+id/tv_moka"
+                style="@style/tv_tab"
+                android:drawableTop="@mipmap/icon_home_s"
+                android:text="模卡"
+                android:textColor="@color/color_1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_shot"
+            style="@style/rl_tab">
+
+            <TextView
+                android:id="@+id/tv_shot"
+                style="@style/tv_tab"
+                android:drawableTop="@mipmap/icon_photo_n"
+                android:text="拍摄" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_job"
+            style="@style/rl_tab">
+
+            <TextView
+                android:id="@+id/tv_notice"
+                style="@style/tv_tab"
+                android:drawableTop="@mipmap/icon_circular_n"
+                android:text="工作" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_user_center"
+            style="@style/rl_tab">
+
+            <TextView
+                android:id="@+id/tv_user"
+                style="@style/tv_tab"
+                android:drawableTop="@mipmap/icon_personal_n"
+                android:text="我的" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

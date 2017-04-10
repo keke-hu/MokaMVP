@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b1b1b"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:text="买萌官方人才库推荐中"
+        android:textColor="@color/color_11"
+        android:textSize="@dimen/font_6"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:gravity="center"
+        android:text="推荐渠道：买萌官网、微信公众号、商家端演艺\n人才智能搜索引擎"
+        android:textColor="@color/color_10"
+        android:textSize="@dimen/font_2" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_home"
+            android:layout_width="138dp"
+            android:layout_height="97dp"
+            android:background="@mipmap/work_home1">
+
+            <TextView
+                android:id="@+id/tv_home_title"
+                style="@style/talent_pool_title_style"
+                android:text="我的主页" />
+
+            <TextView
+                android:id="@+id/tv_home_content"
+                style="@style/talent_pool_content_style"
+                android:layout_below="@id/tv_home_title" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_contact"
+            android:layout_width="138dp"
+            android:layout_height="97dp"
+            android:layout_marginLeft="20dp"
+            android:background="@mipmap/work_contact2">
+
+            <TextView
+                android:id="@+id/tv_contact_title"
+                style="@style/talent_pool_title_style"
+                android:text="联系方式" />
+
+            <TextView
+                android:id="@+id/tv_contact_content"
+                style="@style/talent_pool_content_style"
+                android:layout_below="@id/tv_contact_title" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_moka"
+            android:layout_width="138dp"
+            android:layout_height="97dp"
+            android:background="@mipmap/work_moka3">
+
+            <TextView
+                android:id="@+id/tv_moka_title"
+                style="@style/talent_pool_title_style"
+                android:text="模卡管理" />
+
+            <TextView
+                android:id="@+id/tv_moka_content"
+                style="@style/talent_pool_content_style"
+                android:layout_below="@id/tv_moka_title" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_resume"
+            android:layout_width="138dp"
+            android:layout_height="97dp"
+            android:layout_marginLeft="20dp"
+            android:background="@mipmap/work_resume4">
+
+            <TextView
+                android:id="@+id/tv_resume_title"
+                style="@style/talent_pool_title_style"
+                android:text="简历管理" />
+
+            <TextView
+                android:id="@+id/tv_resume_content"
+                style="@style/talent_pool_content_style"
+                android:layout_below="@id/tv_resume_title" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

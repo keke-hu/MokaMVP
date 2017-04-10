@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent1">#20000000</color>
+    <color name="transparent2">#70000000</color>
+
+    <color name="white1">#99FFFFFF</color>
+    <color name="transparent_gray">#c8303030</color>
+    <color name="transparent_deep_ray">#F21a1a1a</color>
+    <color name="transparent_white1">#05303030</color>
+
+    <color name="black">#ff000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="msg_bg">#d8d4cf</color>
+    <color name="green">#97c31a</color>
+    <color name="blue">#319ce0</color>
+    <color name="light_gray">#FBFBFB</color>
+    <color name="girl">#ff64a2</color>
+    <color name="blue_select">#1d8be0</color>
+    <color name="gray">#e1e1e1</color>
+    <color name="gray_et">#ebebeb</color>
+    <color name="gray_bg">#f3f3f3</color>
+    <color name="gray1">#a0a0a0</color>
+    <color name="gray_dt">#adadad</color>
+    <color name="gray_sai">#7b7b7b</color>
+    <!-- <color name="gray">#A8A8A8</color> -->
+    <color name="red">#D80000</color>
+    <color name="orange">#ff9338</color>
+    <color name="bg">#d8d4cf</color>
+    <color name="shequ_tab_text_gray">#6a6a6a</color>
+    <color name="shequ_tab2">#17b195</color>
+    <color name="shequ_tab3">#f87740</color>
+    <color name="fatie1">#e5eaee</color>
+    <color name="fatie2">#fefeff</color>
+    <color name="top_color">#eec298</color>
+    <color name="rb1">#dedad4</color>
+    <color name="bg_color1">#ebebeb</color>
+    <!-- 主页tab颜色设置 -->
+    <color name="start">#f8f8f8</color>
+    <color name="main_tab_bottom">#ffffff</color>
+    <color name="tab_indicator_color">#000000</color>
+    <color name="tab_indicator_color1">#7a7a7a</color>
+    <color name="action_bar_title_color">#000000</color>
+    <!-- 随机颜色设置 -->
+    <color name="random1">#7cddd7</color>
+    <color name="random2">#decdb2</color>
+    <color name="random3">#fea98b</color>
+    <color name="random4">#99cbf0</color>
+    <color name="random5">#f9abcb</color>
+    <color name="random6">#fddc90</color>
+    <color name="random7">#c1e1b7</color>
+    <color name="random8">#84d8b3</color>
+
+    <!-- 看点改版颜色 -->
+    <color name="category_news_text">#747474</color>
+    <color name="comment_title_hot">#fa5e00</color>
+    <color name="comment_title_normal">#3194E0</color>
+    <color name="common_gray">#fbfbfb</color>
+    <color name="common_deep_blue">#3099dd</color>
+    <color name="common_light_blue">#5dcade</color>
+    <color name="common_praised">#FF9337</color>
+    <color name="common_unpraised">#adadad</color>
+    <color name="common_black">#383838</color>
+    <color name="top_view_bg">#222222</color>
+    <color name="moka_bg">#202020</color>
+    <color name="trans">#00000000</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="primary">#F44336</color>
+    <color name="divider">#B6B6B6</color>
+
+
+    <color name="color_1">#fc496b</color>
+    <color name="color_2">#ffb4c2</color>
+    <color name="color_3">#ffeef3</color>
+    <color name="color_4">#242424</color>
+    <color name="color_5">#383637</color>
+    <color name="color_6">#000000</color>
+    <color name="color_7">#2a2a2a</color>
+    <color name="color_8">#4a4a4a</color>
+    <color name="color_9">#666666</color>
+    <color name="color_10">#999999</color>
+    <color name="color_11">#ffffff</color>
+    <color name="color_12">#f1f1f1</color>
+    <color name="color_13">#dddddd</color>
+    <color name="red_rb_checked">#DF405F</color>
+   <color name="red_rb">#F2FC496B</color>
+    <color name="sign_up_bg">#CC666666</color>
+    <color name="notice_note">#b2ffffff</color>
+    <color name="expired">#21ffffff</color>
+
+
+    <color name="top_bottom">#42BAF8</color>
+    <color name="line_color">#FF15FF00</color>
+    <color name="shadow_color">#7F000000</color>
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.cdwx.moka.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_4"
+        app:titleText="解锁功能" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <include layout="@layout/divider_line_layout" />
+
+            <ImageView
+                android:id="@+id/iv_moka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_marginRight="37dp"
+                android:layout_marginTop="66dp" />
+
+            <TextView
+                android:id="@+id/tv_replace_moka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:drawableLeft="@drawable/replace_moka_selector"
+                android:drawablePadding="6dp"
+                android:text="替换模卡"
+                android:textSize="@dimen/font_4" />
+
+            <RadioGroup
+                android:id="@+id/rg_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="88dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_moment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/moment_radio_selector"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rb_wechat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="33dp"
+                    android:button="@drawable/wechat_radio_selector" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_share"
+                android:layout_width="288dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="28dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_5"
+                android:text="立即分享"
+                android:textColor="@color/color_11"
+                android:textSize="@dimen/font_4" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

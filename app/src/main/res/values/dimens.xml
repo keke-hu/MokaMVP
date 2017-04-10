@@ -1,0 +1,28 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="online_bg_height">242dp</dimen>
+    <dimen name="top_bar_height">40dp</dimen>
+    <dimen name="font_1">16sp</dimen>
+    <dimen name="font_2">13sp</dimen>
+    <dimen name="font_3">11sp</dimen>
+    <dimen name="font_4">14sp</dimen>
+    <dimen name="font_5">9sp</dimen>
+    <dimen name="font_6">21sp</dimen>
+    <dimen name="qr_width">58dp</dimen>
+    <dimen name="infor_textview_size">9sp</dimen>
+    <dimen name="infor_title_margin_top">7dp</dimen>
+    <dimen name="infor_content_margin_top">2dp</dimen>
+    <dimen name="infor_first_margin_top">10dp</dimen>
+    <!--信息栏在下标注-->
+    <dimen name="bottom_information_name_size">26sp</dimen>
+    <dimen name="bottom_information_title_size">10sp</dimen>
+    <dimen name="bottom_information_content_size">15sp</dimen>
+    <dimen name="bottom_information_content_margin_top">10dp</dimen>
+    <dimen name="bottom_information_ll_margin_left">17dp</dimen>
+    <dimen name="bottom_qr_width">60dp</dimen>
+
+    <dimen name="frames_video_height">60dip</dimen>
+</resources>

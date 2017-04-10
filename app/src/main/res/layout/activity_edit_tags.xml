@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_4"
+    android:orientation="vertical">
+
+    <com.cdwx.moka.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_4"
+        app:right_view_text="保存"
+        app:showRightView="true"
+        app:titleText="通告范围" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#0Cffffff" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+
+            <com.cdwx.moka.widget.TagCloudLayout
+                android:id="@+id/tcl_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:lineSpacing="10dp"
+                app:tagSpacing="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

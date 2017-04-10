@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/common_black"
+    android:orientation="vertical">
+
+    <com.cdwx.moka.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_4"
+        app:titleText="报名" />
+
+    <include layout="@layout/divider_line_layout" />
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/rl_personal_photo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_add_head"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@mipmap/head_portrait" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="点击上传个人照"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_personal_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#383637"
+                android:orientation="vertical">
+
+
+                <RelativeLayout style="@style/sign_up_detail_rl">
+
+                    <TextView
+                        style="@style/sign_up_detail_right_tv"
+                        android:text="姓名" />
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        style="@style/sign_up_detail_et" />
+
+                    <TextView style="@style/sign_up_detail_line" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/sign_up_detail_rl">
+
+                    <TextView
+                        style="@style/sign_up_detail_right_tv"
+                        android:text="微信账号" />
+
+                    <EditText
+                        android:id="@+id/et_wechat_acount"
+                        style="@style/sign_up_detail_et"
+                        android:hint="请填写" />
+
+                    <TextView style="@style/sign_up_detail_line" />
+                </RelativeLayout>
+
+
+                <RelativeLayout style="@style/sign_up_detail_rl">
+
+                    <TextView
+                        style="@style/sign_up_detail_right_tv"
+                        android:text="手机号码" />
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        style="@style/sign_up_detail_et" />
+
+                    <TextView style="@style/sign_up_detail_line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_sex"
+                    style="@style/sign_up_detail_rl">
+
+                    <TextView
+                        style="@style/sign_up_detail_right_tv"
+                        android:text="性别" />
+
+                    <TextView
+                        android:id="@+id/tv_sex"
+                        style="@style/sign_up_detail_et"
+                        android:enabled="false"
+                        android:hint="请选择" />
+
+                    <TextView
+                        style="@style/sign_up_detail_arrow_tv"
+                        android:drawableRight="@mipmap/sign_up_arrow" />
+
+                    <TextView style="@style/sign_up_detail_line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_birthday"
+                    style="@style/sign_up_detail_rl">
+
+                    <TextView
+                        style="@style/sign_up_detail_right_tv"
+                        android:text="出生日期" />
+
+                    <TextView
+                        android:id="@+id/tv_birthday"
+                        style="@style/sign_up_detail_et"
+                        android:enabled="false"
+                        android:hint="请选择" />
+
+                    <TextView
+                        style="@style/sign_up_detail_arrow_tv"
+                        android:drawableRight="@mipmap/sign_up_arrow" />
+
+                    <TextView style="@style/sign_up_detail_line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_height"
+                    style="@style/sign_up_detail_rl">
+
+                    <TextView
+                        style="@style/sign_up_detail_right_tv"
+                        android:text="身高" />
+
+                    <TextView
+                        android:id="@+id/tv_height"
+                        style="@style/sign_up_detail_et"
+                        android:maxLength="3" />
+
+                    <TextView
+                        style="@style/sign_up_detail_arrow_tv"
+                        android:text="cm"
+                        android:textColor="@color/white" />
+
+                    <TextView style="@style/sign_up_detail_line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_weight"
+                    style="@style/sign_up_detail_rl">
+
+                    <TextView
+                        style="@style/sign_up_detail_right_tv"
+                        android:text="体重" />
+
+                    <TextView
+                        android:id="@+id/tv_weight"
+                        style="@style/sign_up_detail_et"
+                        android:maxLength="3" />
+
+                    <TextView
+                        style="@style/sign_up_detail_arrow_tv"
+                        android:text="kg"
+                        android:textColor="@color/white" />
+
+                    <TextView style="@style/sign_up_detail_line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_shoe_size"
+                    style="@style/sign_up_detail_rl">
+
+                    <TextView
+                        style="@style/sign_up_detail_right_tv"
+                        android:text="鞋码" />
+
+
+                    <TextView
+                        android:id="@+id/tv_shoe_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:maxLength="3"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="20dp"
+                        android:textColor="@color/white" />
+
+                    <TextView style="@style/sign_up_detail_line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_sw"
+                    style="@style/sign_up_detail_rl">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            style="@style/sign_up_detail_right_tv"
+                            android:layout_gravity="center_vertical"
+                            android:text="三围" />
+
+                        <LinearLayout
+                            android:baselineAligned="false"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView style="@style/sign_up_detail_vertical_line" />
+
+                                <TextView
+                                    android:id="@+id/tv_bust"
+                                    style="@style/sign_up_detail_measurements"
+                                    android:hint="胸围"
+                                    android:maxLength="2"
+                                    android:text="70" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView style="@style/sign_up_detail_vertical_line" />
+
+                                <TextView
+                                    android:id="@+id/tv_waist"
+                                    style="@style/sign_up_detail_measurements"
+                                    android:hint="腰围"
+                                    android:maxLength="2"
+                                    android:text="70" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView style="@style/sign_up_detail_vertical_line" />
+
+                                <TextView
+                                    android:id="@+id/tv_hipline"
+                                    style="@style/sign_up_detail_measurements"
+                                    android:hint="臀围"
+                                    android:maxLength="2"
+                                    android:text="70" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <TextView style="@style/sign_up_detail_line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_area"
+                    style="@style/sign_up_detail_rl">
+
+                    <TextView
+                        style="@style/sign_up_detail_right_tv"
+                        android:text="地区" />
+
+
+                    <TextView
+                        android:id="@+id/et_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:drawablePadding="12dp"
+                        android:drawableRight="@mipmap/sign_up_arrow"
+                        android:enabled="false"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="20dp"
+                        android:text="42ma"
+                        android:textColor="@color/white" />
+
+                    <TextView style="@style/sign_up_detail_line" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/red_bg"
+                    android:text="提交"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b1b1b"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.cdwx.moka.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_4"
+        app:right_view_text="保存"
+        app:showRightView="true"
+        app:titleText="联系方式" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:gravity="center"
+        android:text="我的工作微信号"
+        android:textColor="@color/color_1"
+        android:textSize="@dimen/font_1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:gravity="center"
+        android:text="请填写您的工作微信，买萌官方客服将及时为您\n推送重要的通告、拍摄、收益提现事宜"
+        android:textColor="@color/color_9"
+        android:textSize="@dimen/font_2" />
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="38dp"
+        android:background="#cc242424">
+
+        <EditText
+            android:layout_centerVertical="true"
+            android:id="@+id/et_wechat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="14dp"
+            android:hint="微信号"
+            android:background="@null"
+            android:textColor="@color/color_11"
+            android:textSize="@dimen/font_4" />
+    </RelativeLayout>
+
+</LinearLayout>

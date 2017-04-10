@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_4"
+    android:orientation="vertical">
+
+    <com.cdwx.moka.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_4"
+        app:right_view_text="取消报名"
+        app:showRightView="true"
+        app:titleText="报名成功" />
+
+    <include layout="@layout/divider_line_layout" />
+
+    <com.cdwx.moka.widget.CustomNestedScrollView
+        android:id="@+id/cnsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="34dp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/photo_success"
+                        android:drawablePadding="10dp"
+                        android:text="预约成功"
+                        android:textColor="@color/color_1"
+                        android:textSize="@dimen/font_6" />
+
+                    <TextView
+                        android:id="@+id/tv_remark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/color_10"
+                        android:textSize="@dimen/font_2" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="#0CFFFFFF"
+                android:orientation="vertical"
+                android:paddingBottom="22dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="7dp">
+
+                <RelativeLayout style="@style/sign_up_success_rl_style">
+
+                    <TextView
+                        style="@style/sign_up_success_tv_title_style"
+                        android:text="拍摄时间：" />
+
+                    <TextView
+                        android:id="@+id/tv_shot_time"
+                        style="@style/sign_up_success_tv_content_style" />
+                </RelativeLayout>
+
+
+                <RelativeLayout style="@style/sign_up_success_rl_style">
+
+                    <TextView
+                        style="@style/sign_up_success_tv_title_style"
+                        android:text="拍摄地址：" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        style="@style/sign_up_success_tv_content_style" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/sign_up_success_rl_style">
+
+                    <TextView
+                        style="@style/sign_up_success_tv_title_style"
+                        android:text="给片时间：" />
+
+                    <TextView
+                        android:id="@+id/tv_give_time"
+                        style="@style/sign_up_success_tv_content_style" />
+                </RelativeLayout>
+
+
+                <RelativeLayout style="@style/sign_up_success_rl_style">
+
+                    <TextView
+                        style="@style/sign_up_success_tv_title_style"
+                        android:text="用户Q群：" />
+
+                    <TextView
+                        android:id="@+id/tv_qq_group"
+                        style="@style/sign_up_success_tv_content_style" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/sign_up_success_rl_style">
+
+                    <TextView
+                        style="@style/sign_up_success_tv_title_style"
+                        android:text="联系方式：" />
+
+                    <TextView
+                        android:id="@+id/tv_contact"
+                        style="@style/sign_up_success_tv_content_style" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:text="摄影师介绍"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="33dp"
+                android:textColor="#dcdcdc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/image_loading" />
+
+            <TextView
+
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="8dp"
+                android:textColor="#dcdcdc" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="8dp" />
+
+
+        </LinearLayout>
+    </com.cdwx.moka.widget.CustomNestedScrollView>
+</LinearLayout>

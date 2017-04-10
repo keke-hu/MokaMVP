@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.cdwx.moka.widget.TopBar
+        android:id="@+id/top_bar"
+        app:titleText="曝光栏"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_4"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.cdwx.moka.widget.SwipeRefreshLayout
+            android:id="@+id/srl_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_exposure"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.cdwx.moka.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/tv_exposure"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:background="@drawable/report_bg"
+            android:gravity="center"
+            android:text="被骗过，我也来曝光" />
+    </FrameLayout>
+</LinearLayout>

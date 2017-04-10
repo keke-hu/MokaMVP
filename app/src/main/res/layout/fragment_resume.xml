@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_12"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="84dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_13" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_star"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#0CFFFFFF" />
+
+                <LinearLayout
+                    style="@style/online_resume_ll_style"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/online_resume_title_style"
+                        android:text="网红档案" />
+
+                    <TextView
+                        style="@style/online_resume_subtitle_style"
+                        android:text="Star" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_13" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="93dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:id="@+id/tv_live_title"
+                            style="@style/online_resume_live_tv_style"
+                            android:drawableLeft="@mipmap/online_live"
+                            android:text="直播平台" />
+
+                        <TextView
+                            android:id="@+id/tv_live"
+                            style="@style/online_resume_live_tv_content_style"
+                            android:layout_below="@id/tv_live_title"
+                            android:text="hah" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="0.5dp"
+                        android:layout_height="93dp"
+                        android:background="@color/color_13" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_live_fans_title"
+                            style="@style/online_resume_live_tv_style"
+                            android:drawableLeft="@mipmap/online_live_fans"
+                            android:text="直播粉丝" />
+
+                        <TextView
+                            android:id="@+id/tv_live_fans"
+                            style="@style/online_resume_live_tv_content_style"
+                            android:layout_below="@id/tv_live_fans_title" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_13" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="93dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:id="@+id/tv_weibo_title"
+                            style="@style/online_resume_live_tv_style"
+                            android:drawableLeft="@mipmap/online_weibo"
+                            android:text="微博账号" />
+
+                        <TextView
+                            android:id="@+id/tv_weibo"
+                            style="@style/online_resume_live_tv_content_style"
+                            android:layout_below="@id/tv_weibo_title" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="0.5dp"
+                        android:layout_height="93dp"
+                        android:background="@color/color_13" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:id="@+id/tv_weibo_fans_title"
+                            style="@style/online_resume_live_tv_style"
+                            android:drawableLeft="@mipmap/online_weibo_fans"
+                            android:text="微博粉丝" />
+
+                        <TextView
+                            android:id="@+id/tv_weibo_fans"
+                            style="@style/online_resume_live_tv_content_style"
+                            android:layout_below="@id/tv_weibo_fans_title" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@color/white"
+                android:minHeight="180dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/online_resume_ll_style"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/online_resume_title_style"
+                        android:text="专业标签" />
+
+                    <TextView
+                        style="@style/online_resume_subtitle_style"
+                        android:text="Profession" />
+                </LinearLayout>
+
+                <com.cdwx.moka.widget.TagCloudLayout
+                    android:id="@+id/tcl_tag"
+                    style="@style/online_moka_tcl_style"
+                    android:visibility="gone"
+                    app:lineSpacing="10dp"
+                    app:tagSpacing="12dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="暂无资料"
+                            android:textColor="#9b9b9b"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@color/white"
+                android:minHeight="180dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+
+                <LinearLayout
+                    style="@style/online_resume_ll_style"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/online_resume_title_style"
+                        android:text="通告范围" />
+
+                    <TextView
+                        style="@style/online_resume_subtitle_style"
+                        android:text="Notice" />
+                </LinearLayout>
+
+                <com.cdwx.moka.widget.TagCloudLayout
+                    android:id="@+id/tcl_personalized_service"
+                    style="@style/online_moka_tcl_style"
+                    app:lineSpacing="10dp"
+                    app:tagSpacing="12dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_personalized_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="暂无资料"
+                            android:textColor="#9b9b9b"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@color/white"
+                android:minHeight="180dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    style="@style/online_resume_ll_style"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/online_resume_title_style"
+                        android:text="个人介绍" />
+
+                    <TextView
+                        style="@style/online_resume_subtitle_style"
+                        android:text="Introduction" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/color_10"
+                    android:textSize="@dimen/font_2"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="暂无资料"
+                            android:textColor="#9b9b9b"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

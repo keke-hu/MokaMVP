@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b1b1b"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.cdwx.moka.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_4"
+        app:titleText="报名成功" />
+
+    <ImageView
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="58dp"
+        android:src="@mipmap/success_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="报名成功"
+        android:textColor="@color/color_1"
+        android:textSize="@dimen/font_6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="请耐心等待，买萌将尽快确认并联系您"
+        android:textColor="@color/color_10"
+        android:textSize="@dimen/font_3" />
+
+    <Button
+        android:id="@+id/btn_complete"
+        android:layout_width="336dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_5"
+        android:text="去完善简历"
+        android:textColor="@color/color_11"
+        android:textSize="@dimen/font_4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:drawableLeft="@mipmap/success_prompt"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="完善简历后，您可看到更多优质的通告"
+        android:textColor="@color/color_1"
+        android:textSize="@dimen/font_3" />
+
+</LinearLayout>

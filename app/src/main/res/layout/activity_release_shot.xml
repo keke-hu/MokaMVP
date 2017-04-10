@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cdwx.moka.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/color_4"
+        app:titleText="发布服务" />
+
+    <Button
+        android:id="@+id/btn_release"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/button_5_right_angle"
+        android:text="发布" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="47dp"
+        android:layout_marginTop="@dimen/top_bar_height"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1b1b1b"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#0fffffff" />
+
+            <RelativeLayout
+                android:id="@+id/rl_location"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@color/color_4"
+                android:gravity="center_vertical"
+                android:paddingEnd="14dp"
+                android:paddingStart="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/serve_location"
+                    android:drawablePadding="5dp"
+                    android:text="服务地点"
+                    android:textColor="@color/color_10"
+                    android:textSize="@dimen/font_4" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="13dp"
+                    android:drawableRight="@mipmap/user_center_arrow"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/font_2" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_outdoor_detail"
+                style="@style/release_rl">
+
+                <RelativeLayout
+                    android:id="@+id/rl_outdoor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_outdoor"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@mipmap/serve_outdoor" />
+
+                    <TextView
+                        style="@style/release_tv_subject"
+                        android:layout_toRightOf="@id/iv_outdoor"
+                        android:text="外景拍摄" />
+
+                    <CheckBox
+                        android:id="@+id/cb_release_outdoor"
+                        style="@style/release_checkbox" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_outdoor_tag"
+                    style="@style/release_ll"
+                    android:layout_below="@id/rl_outdoor"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        style="@style/release_tag"
+                        android:text="风格标签：" />
+
+                    <TextView
+                        android:id="@+id/tv_outdoor_tags"
+                        style="@style/release_tag"
+                        android:layout_marginStart="11dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/release_ll"
+                    android:layout_below="@id/ll_outdoor_tag"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        style="@style/release_tag"
+                        android:text="拍摄价格：" />
+
+                    <TextView
+                        android:id="@+id/tv_outdoor_price"
+                        style="@style/release_price" />
+
+                </LinearLayout>
+
+                <ImageView style="@style/release_arrow" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_private_detail"
+                style="@style/release_rl">
+
+                <RelativeLayout
+                    android:id="@+id/rl_private"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_private"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@mipmap/serve_private" />
+
+                    <TextView
+                        style="@style/release_tv_subject"
+                        android:layout_toRightOf="@id/iv_private"
+                        android:text="私房拍摄" />
+
+                    <CheckBox
+                        android:id="@+id/cb_release_private"
+                        style="@style/release_checkbox"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_private_tag"
+                    style="@style/release_ll"
+                    android:layout_below="@id/rl_private"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        style="@style/release_tag"
+                        android:text="风格标签：" />
+
+                    <TextView
+                        android:id="@+id/tv_private_tags"
+                        style="@style/release_tag"
+                        android:layout_marginStart="11dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/release_ll"
+                    android:layout_below="@id/ll_private_tag"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        style="@style/release_tag"
+                        android:text="拍摄价格：" />
+
+                    <TextView
+                        android:id="@+id/tv_private_price"
+                        style="@style/release_price" />
+
+                </LinearLayout>
+
+                <ImageView style="@style/release_arrow" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_home_detail"
+                style="@style/release_rl">
+
+                <RelativeLayout
+                    android:id="@+id/rl_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_home"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@mipmap/serve_home" />
+
+                    <TextView
+                        style="@style/release_tv_subject"
+                        android:layout_toRightOf="@id/iv_home"
+                        android:text="室内拍摄" />
+
+                    <CheckBox
+                        android:id="@+id/cb_release_home"
+                        style="@style/release_checkbox" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_home_tag"
+                    style="@style/release_ll"
+                    android:layout_below="@id/rl_home"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        style="@style/release_tag"
+                        android:text="风格标签：" />
+
+                    <TextView
+                        android:id="@+id/tv_home_tags"
+                        style="@style/release_tag"
+                        android:layout_marginStart="11dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/release_ll"
+                    android:layout_below="@id/ll_home_tag"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        style="@style/release_tag"
+                        android:text="拍摄价格：" />
+
+                    <TextView
+                        android:id="@+id/tv_home_price"
+                        style="@style/release_price" />
+
+                </LinearLayout>
+
+                <ImageView style="@style/release_arrow" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_taobao_detail"
+                style="@style/release_rl">
+
+                <RelativeLayout
+                    android:id="@+id/rl_taobao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_taobao"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@mipmap/serve_taobao" />
+
+                    <TextView
+                        style="@style/release_tv_subject"
+                        android:layout_toRightOf="@id/iv_taobao"
+                        android:text="淘宝商拍" />
+
+                    <CheckBox
+                        android:id="@+id/cb_release_taobao"
+                        style="@style/release_checkbox" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_taobao_tag"
+                    style="@style/release_ll"
+                    android:layout_below="@id/rl_taobao"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        style="@style/release_tag"
+                        android:text="风格标签：" />
+
+                    <TextView
+                        android:id="@+id/tv_taobao_tags"
+                        style="@style/release_tag"
+                        android:layout_marginStart="11dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/release_ll"
+                    android:layout_below="@id/ll_taobao_tag"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        style="@style/release_tag"
+                        android:text="拍摄价格：" />
+
+                    <TextView
+                        android:id="@+id/tv_taobao_price"
+                        style="@style/release_price" />
+
+                </LinearLayout>
+
+                <ImageView style="@style/release_arrow" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

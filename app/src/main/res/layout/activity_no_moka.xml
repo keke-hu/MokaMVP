@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b1b1b">
+
+    <com.cdwx.moka.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_4"
+        app:titleText="通告报名" />
+
+    <TextView
+        android:id="@+id/tv_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar"
+        android:layout_marginTop="58dp"
+        android:gravity="center"
+        android:text="您还没有模卡，模卡是模特面试必备资料,\n先去制作一份吧" />
+
+
+    <Button
+        android:id="@+id/btn_do"
+        android:layout_width="336dp"
+        android:layout_height="42dp"
+        android:layout_below="@id/tv_note"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_5"
+        android:text="制作模卡"
+        android:textColor="@color/color_11"
+        android:textSize="@dimen/font_4" />
+</RelativeLayout>

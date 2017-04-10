@@ -1,0 +1,10 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--信息栏在下标注-->
+    <dimen name="bottom_information_name_size">26sp</dimen>
+    <dimen name="bottom_information_title_size">10sp</dimen>
+    <dimen name="bottom_information_content_size">15sp</dimen>
+    <dimen name="bottom_information_content_margin_top">10dp</dimen>
+    <dimen name="bottom_information_ll_margin_left">17dp</dimen>
+    <dimen name="bottom_qr_width">60dp</dimen>
+</resources>

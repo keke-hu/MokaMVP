@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="135dp"
+    android:background="#F2242424"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_select_border"
+            style="@style/radiobutton_style"
+            android:checked="true"
+            android:text="选择边框" />
+
+        <RadioButton
+            android:id="@+id/rb_remove_qd"
+            style="@style/radiobutton_style"
+            android:text="去二维码" />
+
+        <RadioButton
+            android:id="@+id/rb_switch_template"
+            style="@style/radiobutton_style"
+            android:text="切换模板" />
+    </RadioGroup>
+
+</LinearLayout>

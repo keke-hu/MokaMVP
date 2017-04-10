@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b1b1b"
+    android:orientation="vertical">
+
+    <com.cdwx.moka.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_4"
+        app:titleText="通告报名" />
+
+    <TextView
+        android:id="@+id/tv_note"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@id/top_bar"
+        android:paddingStart="14dp"
+        android:paddingTop="21dp"
+        android:text="请填写您的微信账号，买萌将通过微信联系您"
+        android:textColor="@color/color_9"
+        android:textSize="@dimen/font_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_below="@id/tv_note"
+        android:background="@color/color_4"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:text="微信账号"
+            android:textColor="@color/color_11"
+            android:textSize="@dimen/font_4" />
+
+        <EditText
+            android:id="@+id/et_weixin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:hint="点击填写"
+            android:background="@null"
+            android:textColorHint="@color/color_10"
+            android:textSize="@dimen/font_2" />
+
+        <ImageView style="@style/user_center_arrow_style" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_complete"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_5_right_angle"
+        android:text="完成"
+        android:textColor="@color/color_11"
+        android:textSize="@dimen/font_4" />
+
+</RelativeLayout>

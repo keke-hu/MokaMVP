@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="282dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/online_bg_height"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/online_bg_height"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp">
+
+                        <ImageView
+                            android:id="@+id/iv_home_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="190dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/online_moka_bg" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/online_infor_bg">
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="110dp"
+                                android:maxEms="5"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_1" />
+
+                            <TextView
+                                android:id="@+id/tv_sex"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@id/tv_name"
+                                android:paddingBottom="2dp"
+                                android:textColor="#999999"
+                                android:textSize="@dimen/font_2" />
+
+                            <TextView
+                                android:id="@+id/tv_area"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="12dp"
+                                android:layout_toRightOf="@id/tv_sex"
+                                android:paddingBottom="2dp"
+                                android:textColor="#999999"
+                                android:textSize="@dimen/font_2" />
+
+                            <TextView
+                                android:id="@+id/tv_follow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="8dp"
+                                android:drawableLeft="@mipmap/eye"
+                                android:drawablePadding="4dp"
+                                android:textColor="@color/color_1"
+                                android:textSize="@dimen/font_2" />
+
+                        </RelativeLayout>
+                    </FrameLayout>
+
+                    <LinearLayout style="@style/online_moka_ll">
+
+                        <LinearLayout style="@style/online_moka_ll_inner_item">
+
+                            <TextView
+                                style="@style/online_moka_ll_inner_tv"
+                                android:text="身高" />
+
+                            <TextView
+                                android:id="@+id/tv_height"
+                                style="@style/online_moka_ll_inner_tv"
+                                android:maxLength="5" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginTop="8dp"
+                            android:background="#aaaaaa" />
+
+                        <LinearLayout style="@style/online_moka_ll_inner_item">
+
+                            <TextView
+                                style="@style/online_moka_ll_inner_tv"
+                                android:text="体重" />
+
+                            <TextView
+                                android:id="@+id/tv_weight"
+                                style="@style/online_moka_ll_inner_tv"
+                                android:maxLength="4" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginTop="8dp"
+                            android:background="#aaaaaa" />
+
+                        <LinearLayout style="@style/online_moka_ll_inner_item">
+
+                            <TextView
+                                style="@style/online_moka_ll_inner_tv"
+                                android:text="三围" />
+
+                            <TextView
+                                android:id="@+id/tv_sign"
+                                style="@style/online_moka_ll_inner_tv" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginTop="8dp"
+                            android:background="#aaaaaa" />
+
+                        <LinearLayout style="@style/online_moka_ll_inner_item">
+
+                            <TextView
+                                style="@style/online_moka_ll_inner_tv"
+                                android:text="鞋码" />
+
+                            <TextView
+                                android:id="@+id/tv_shoe_size"
+                                style="@style/online_moka_ll_inner_tv"
+                                android:maxLength="2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:background="@color/color_12" />
+                </LinearLayout>
+
+                <com.cdwx.moka.widget.RoundAngleFrameLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="20dp"
+                    app:radius="35dp">
+
+                    <ImageView
+                        android:id="@+id/iv_head"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/bg_main" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/common_black">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:drawableLeft="@mipmap/edit"
+                            android:text="编辑"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </com.cdwx.moka.widget.RoundAngleFrameLayout>
+            </FrameLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="top"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleMarginTop="13dp">
+                <TextView
+                    android:textSize="@dimen/font_1"
+                    android:text="在线模卡"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!--自定义控件-->
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right|top"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:src="@mipmap/online_share" />
+            </android.support.v7.widget.Toolbar>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:background="@color/color_11"
+                app:tabIndicatorColor="@color/color_1"
+                app:tabSelectedTextColor="@color/color_1"
+                app:tabTextColor="@color/color_4" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="16dp"
+        android:src="@mipmap/online_moka_add"
+        app:backgroundTint="@color/color_1" />
+</android.support.design.widget.CoordinatorLayout>

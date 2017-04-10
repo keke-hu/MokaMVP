@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_moka_info"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+
+    <LinearLayout
+        android:id="@+id/ll_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_name"
+            style="@style/moka_infor_portrait_tv"
+            android:maxLength="5"
+            android:text="安安"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_4" />
+
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_live_platform"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_first_margin_top"
+            android:text="直播平台|LIVE" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_live_platform_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+            android:text="花椒" />
+
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_fans"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_title_margin_top"
+            android:text="直播粉丝|FANS" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_fans_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+            android:text="2万" />
+
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_ID"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_title_margin_top"
+            android:text="微博账号|ID" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_ID_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+            android:text="哈哈" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_ID_fans"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_title_margin_top"
+            android:text="微博粉丝|FNAS" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_ID_fans_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+            android:text="2万" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_height"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_title_margin_top"
+            android:text="身高|HEIGHT" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_height_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+            android:text="172" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_weight"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_title_margin_top"
+            android:text="体重|WEIGHT" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_weight_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+            android:text="50" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_bwh"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_title_margin_top"
+            android:text="三围|BWH" />
+
+        <com.cdwx.moka.widget.FontTextView
+            android:id="@+id/tv_bwh_content"
+            style="@style/moka_infor_portrait_tv"
+            android:layout_marginTop="@dimen/infor_content_margin_top"
+            android:text="85-67-87" />
+
+
+        <ImageView
+            android:id="@+id/iv_qr"
+            android:layout_width="@dimen/qr_width"
+            android:layout_height="@dimen/qr_width"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+</RelativeLayout>

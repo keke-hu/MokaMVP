@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_main_hd"
+    android:orientation="vertical">
+
+    <com.cdwx.moka.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_4"
+        app:right_view_text="首页"
+        app:showRightView="true"
+        app:titleText="保存与分享" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_deep_ray">
+
+        <TextView
+            android:id="@+id/tv_save_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@mipmap/save_success"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:text="高清模卡已成功\n保存至手机相册！"
+            android:textColor="@color/color_1"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_puzzle"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:layout_below="@id/tv_save_success"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/bg_main_hd" />
+
+        <TextView
+            android:id="@+id/tv_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_puzzle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="已同时生成在线模卡，点击前往 >>"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_check"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:background="#4a4a4a" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="直接分享，画质更清晰哦"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:background="#4a4a4a" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:baselineAligned="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_check"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_wechat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="4dp"
+                    android:drawableTop="@drawable/wechat_selector"
+                    android:gravity="center"
+                    android:text="微信好友"
+                    android:textColor="#cccccc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_moment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="4dp"
+                    android:drawableTop="@drawable/share_selector"
+                    android:gravity="center"
+                    android:text="朋友圈"
+                    android:textColor="#cccccc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_qq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="4dp"
+                    android:drawableTop="@drawable/qq_selector"
+                    android:gravity="center"
+                    android:text="QQ好友"
+                    android:textColor="#cccccc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_qq_zone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="4dp"
+                    android:drawableTop="@drawable/space_selector"
+                    android:gravity="center"
+                    android:text="QQ空间"
+                    android:textColor="#cccccc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_sina"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="4dp"
+                    android:drawableTop="@drawable/weibo_selector"
+                    android:gravity="center"
+                    android:text="新浪微博"
+                    android:textColor="#cccccc" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

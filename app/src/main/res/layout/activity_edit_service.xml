@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b1b1b"
+    android:orientation="vertical">
+
+    <com.cdwx.moka.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/color_4"
+        app:right_view_text="完成"
+        app:showRightView="true"
+        app:titleText="编辑服务" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#0fffffff" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@color/color_4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="拍摄类型："
+                    android:textColor="@color/color_10"
+                    android:textSize="@dimen/font_4" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_11"
+                    android:textSize="@dimen/font_2" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:drawableLeft="@mipmap/servve_time"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="14dp"
+                    android:text="选择时长与价格"
+                    android:textColor="@color/color_10"
+                    android:textSize="@dimen/font_4" />
+
+                <include layout="@layout/divider_line_layout" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_two_hour"
+                    style="@style/edit_price_rl">
+
+                    <CheckBox
+                        android:id="@+id/cb_two_hour"
+                        style="@style/edit_service_checkbox"
+                        android:checked="true" />
+
+                    <TextView
+                        android:id="@+id/tv_two_hour"
+                        style="@style/edit_hour_tv"
+                        android:layout_toRightOf="@id/cb_two_hour"
+                        android:text="2小时" />
+
+                    <EditText
+                        android:id="@+id/et_two_hour_price"
+                        style="@style/edit_price_et" />
+
+                    <TextView
+                        style="@style/edit_price_tv"
+                        android:layout_toLeftOf="@id/et_two_hour_price" />
+                </RelativeLayout>
+
+                <include layout="@layout/divider_line_layout" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_four_hour"
+                    style="@style/edit_price_rl">
+
+                    <CheckBox
+                        android:id="@+id/cb_four_hour"
+                        style="@style/edit_service_checkbox" />
+
+                    <TextView
+                        android:id="@+id/tv_four_hour"
+                        style="@style/edit_hour_tv"
+                        android:layout_toRightOf="@id/cb_four_hour"
+                        android:text="半天(约4小时)" />
+
+                    <EditText
+                        android:id="@+id/et_four_hour_price"
+                        style="@style/edit_price_et" />
+
+                    <TextView
+                        style="@style/edit_price_tv"
+                        android:layout_toLeftOf="@id/et_four_hour_price" />
+                </RelativeLayout>
+
+                <include layout="@layout/divider_line_layout" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_eight_hour"
+                    style="@style/edit_price_rl">
+
+                    <CheckBox
+                        android:id="@+id/cb_eight_hour"
+                        style="@style/edit_service_checkbox" />
+
+                    <TextView
+                        android:id="@+id/tv_eight_hour"
+                        style="@style/edit_hour_tv"
+                        android:layout_toRightOf="@id/cb_eight_hour"
+                        android:text="一天(约8小时)" />
+
+                    <EditText
+                        android:id="@+id/et_eight_hour_price"
+                        style="@style/edit_price_et" />
+
+                    <TextView
+                        style="@style/edit_price_tv"
+                        android:layout_toLeftOf="@id/et_eight_hour_price" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:drawableLeft="@mipmap/servve_label"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="14dp"
+                    android:text="选择风格标签"
+                    android:textColor="@color/color_10"
+                    android:textSize="@dimen/font_4" />
+
+                <include layout="@layout/divider_line_layout" />
+
+                <com.cdwx.moka.widget.TagCloudLayout
+                    android:id="@+id/tcl_tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="27dp"
+                    android:paddingEnd="21dp"
+                    android:paddingStart="21dp"
+                    android:paddingTop="27dp"
+                    app:lineSpacing="27dp"
+                    app:tagSpacing="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/divider_line_layout" />
+
+
+</LinearLayout>

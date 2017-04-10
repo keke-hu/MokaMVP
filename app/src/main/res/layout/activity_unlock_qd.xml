@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.cdwx.moka.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_4"
+        app:titleText="解锁功能" />
+
+    <include layout="@layout/divider_line_layout" />
+
+    <ScrollView
+        android:id="@+id/sv_unlock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_5"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="46dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:gravity="center"
+                android:textColor="@color/color_1" />
+
+            <TextView
+                android:id="@+id/tv_love"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_marginRight="37dp"
+                android:text="1.上传模卡并分享互动页面给好友，当好友给你点满30个爱心"
+                android:textColor="@color/color_11"
+                android:textSize="@dimen/font_2" />
+
+            <ImageView
+                android:id="@+id/iv_one"
+                android:layout_width="286dp"
+                android:layout_height="162dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="37dp"
+                android:layout_marginRight="37dp"
+                android:layout_marginTop="17dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_marginRight="37dp"
+                android:layout_marginTop="20dp"
+                android:text="2.即可自动获得去二维码的功能啦！"
+                android:textColor="@color/color_11"
+                android:textSize="@dimen/font_2" />
+
+            <ImageView
+                android:id="@+id/iv_two"
+                android:layout_width="286dp"
+                android:layout_height="162dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="37dp"
+                android:layout_marginRight="37dp"
+                android:layout_marginTop="17dp" />
+
+            <Button
+                android:id="@+id/btn_upload"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="37dp"
+                android:layout_marginRight="37dp"
+                android:layout_marginTop="46dp"
+                android:background="@drawable/button_5"
+                android:text="去解锁" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

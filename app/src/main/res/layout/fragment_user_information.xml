@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_4"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/color_5" />
+
+            <RelativeLayout
+                android:id="@+id/rl_img"
+                style="@style/user_center_bg_style"
+                android:layout_height="70dp">
+
+                <TextView
+                    style="@style/user_center_left_textview_style"
+                    android:text="头像" />
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:background="@mipmap/ic_user_default" />
+
+                <ImageView
+                    android:id="@+id/iv_head_arrow"
+                    style="@style/user_center_arrow_style" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_line"
+                style="@style/new_user_center__line" />
+
+            <LinearLayout
+                android:id="@+id/rl_name"
+                style="@style/user_center_bg_style"
+                android:layout_marginTop="1dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/user_center_left_textview_style"
+                    android:text="姓名" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    style="@style/user_center_right_textview_style_1"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:paddingLeft="100dp" />
+
+            </LinearLayout>
+
+            <TextView style="@style/new_user_center__line" />
+
+            <RelativeLayout
+                android:id="@+id/rl_sex"
+                style="@style/user_center_bg_style">
+
+                <TextView
+                    style="@style/user_center_left_textview_style"
+                    android:text="性别" />
+
+                <TextView
+                    android:id="@+id/tv_sex"
+                    style="@style/user_center_right_textview_style"
+                    android:layout_marginRight="30dp"
+                    android:gravity="right"
+                    android:hint="请选择"
+                    android:textColorHint="#666666" />
+
+                <ImageView
+                    android:id="@+id/iv_sex_arrow"
+                    style="@style/user_center_arrow_style" />
+            </RelativeLayout>
+
+            <TextView style="@style/new_user_center__line" />
+
+            <RelativeLayout
+                android:id="@+id/rl_birthday"
+                style="@style/user_center_bg_style">
+
+                <TextView
+                    style="@style/user_center_left_textview_style"
+                    android:text="出生日期" />
+
+                <TextView
+                    android:id="@+id/tv_birthday"
+                    style="@style/user_center_right_textview_style"
+                    android:layout_marginRight="30dp" />
+
+                <ImageView style="@style/user_center_arrow_style" />
+            </RelativeLayout>
+
+            <TextView style="@style/new_user_center__line" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_sg"
+                style="@style/user_center_bg_style">
+
+                <TextView
+                    style="@style/user_center_left_textview_style"
+                    android:text="身高(cm)" />
+
+                <TextView
+                    android:id="@+id/tv_height"
+                    style="@style/user_center_right_textview_style"
+                    android:layout_marginRight="30dp" />
+
+                <ImageView style="@style/user_center_arrow_style" />
+            </RelativeLayout>
+
+            <TextView style="@style/new_user_center__line" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_tz"
+                style="@style/user_center_bg_style">
+
+                <TextView
+                    style="@style/user_center_left_textview_style"
+                    android:text="体重(kg)" />
+
+                <TextView
+                    android:id="@+id/tv_weight"
+                    style="@style/user_center_right_textview_style"
+                    android:layout_marginRight="30dp" />
+
+                <ImageView style="@style/user_center_arrow_style" />
+            </RelativeLayout>
+
+            <TextView style="@style/new_user_center__line" />
+
+            <RelativeLayout
+                android:id="@+id/rl_sw"
+                style="@style/user_center_bg_style">
+
+                <TextView
+                    style="@style/user_center_left_textview_style"
+                    android:text="三围" />
+
+                <TextView
+                    android:id="@+id/tv_hip_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:text="80"
+                    android:textColor="@color/color_11"
+                    android:textColorHint="#666666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_hip_line_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv_hip_line"
+                    android:text="—"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_waist_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/tv_hip_line_left"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:text="60"
+                    android:textColor="@color/white"
+                    android:textColorHint="#666666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_waist_line_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv_waist_line"
+                    android:text="—"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_bust_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/tv_waist_line_left"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:text="80"
+                    android:textColor="@color/white"
+                    android:textColorHint="#666666"
+                    android:textSize="14sp" />
+
+                <ImageView style="@style/user_center_arrow_style" />
+            </RelativeLayout>
+
+            <TextView style="@style/new_user_center__line" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_shoe_size"
+                style="@style/user_center_bg_style">
+
+                <TextView
+                    style="@style/user_center_left_textview_style"
+                    android:text="鞋码" />
+
+                <TextView
+                    android:id="@+id/tv_shoe_size"
+                    style="@style/user_center_right_textview_style"
+                    android:layout_marginRight="30dp" />
+
+                <ImageView style="@style/user_center_arrow_style" />
+            </RelativeLayout>
+
+            <TextView style="@style/new_user_center__line" />
+
+            <RelativeLayout
+                android:id="@+id/rl_area"
+                style="@style/user_center_bg_style"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    style="@style/user_center_left_textview_style"
+                    android:text="地区" />
+
+                <TextView
+                    android:id="@+id/tv_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/white1"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_area_arrow"
+                    style="@style/user_center_arrow_style" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/new_user_center__line"
+                android:layout_marginBottom="80dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

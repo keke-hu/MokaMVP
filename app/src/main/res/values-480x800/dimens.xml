@@ -1,0 +1,14 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="infor_textview_size">7sp</dimen>
+    <dimen name="qr_width">50dp</dimen>
+    <dimen name="infor_title_margin_top">6dp</dimen>
+    <dimen name="infor_content_margin_top">2dp</dimen>
+    <dimen name="infor_first_margin_top">8dp</dimen>
+    <!--信息栏在下标注-->
+    <dimen name="bottom_information_name_size">22sp</dimen>
+    <dimen name="bottom_information_title_size">8sp</dimen>
+    <dimen name="bottom_information_content_size">13sp</dimen>
+    <dimen name="bottom_information_content_margin_top">8dp</dimen>
+    <dimen name="bottom_information_ll_margin_left">14dp</dimen>
+</resources>
