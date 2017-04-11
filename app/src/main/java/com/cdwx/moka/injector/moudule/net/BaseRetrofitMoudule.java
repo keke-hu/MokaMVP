@@ -1,17 +1,18 @@
-package com.cdwx.moka.net;
-
-import android.content.Context;
-
+package com.cdwx.moka.injector.moudule.net;
 
 import com.cdwx.moka.app.AppConstants;
-import com.cdwx.moka.exception.APIException;
-import com.cdwx.moka.model.ResponseBean;
+import com.cdwx.moka.app.App;
+import com.cdwx.moka.net.HttpLoggingInterceptor;
 import com.cdwx.moka.utils.MokaUtil;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import javax.inject.Singleton;
+
+import dagger.Module;
+import dagger.Provides;
 import okhttp3.Cache;
 import okhttp3.CacheControl;
 import okhttp3.Interceptor;
@@ -21,58 +22,27 @@ import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import rx.Observable;
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Func1;
-import rx.schedulers.Schedulers;
 
-/**
- *
- */
-class RetrofitHttpUtil {
-    private static final String TAG = "OkHttp";
+@Module
+public class BaseRetrofitMoudule {
     /**
      * 服务器地址
      */
     protected static final String BASE_URL = "https://app.api.mmote.cn/";
-    //local address
-//    protected static final String BASE_URL = "http://192.168.31.253/";
 
-    APIService apiService;
-    protected static Retrofit retrofit = null;
-    protected static OkHttpClient okHttpClient = null;
-
-    protected Context mContext;
     //缓存设置0不缓存
-    protected boolean isUseCache;
+    protected boolean isUseCache = true;
     protected int maxCacheTime = 60;
 
-    public void setMaxCacheTime(int maxCacheTime) {
-        this.maxCacheTime = maxCacheTime;
+    @Singleton
+    @Provides
+    Retrofit.Builder provideRetrofitBuilder() {
+        return new Retrofit.Builder();
     }
 
-    public void setUseCache(boolean useCache) {
-        isUseCache = useCache;
-    }
-
-    public APIService getService() {
-        if (apiService == null && retrofit != null) {
-            apiService = retrofit.create(APIService.class);
-        }
-        return apiService;
-    }
-
-    public void init(Context context) {
-        this.mContext = context;
-        initOkHttp();
-        initRetrofit();
-        if (apiService == null) {
-            apiService = retrofit.create(APIService.class);
-        }
-    }
-
-    private void initOkHttp() {
+    @Singleton
+    @Provides
+    OkHttpClient provideOkHttpBuilder() {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         //打印请求log日志
         if (AppConstants.DEBUG) {
@@ -80,23 +50,23 @@ class RetrofitHttpUtil {
             loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
             builder.addInterceptor(loggingInterceptor);
         }
-        File cacheFile = new File(MokaUtil.getCacheDir(mContext), "httpCache");
+        File cacheFile = new File(MokaUtil.getCacheDir(App.getInstance()), "httpCache");
         Cache cache = new Cache(cacheFile, 1024 * 1024 * 50);
         Interceptor cacheInterceptor = new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {
                 Request request = chain.request();
-                if (!MokaUtil.isNetworkConnected(mContext) || isUseCache) {//如果网络不可用或者设置只用网络
+                if (!MokaUtil.isNetworkConnected(App.getInstance()) || isUseCache) {//如果网络不可用或者设置只用网络
                     request = request.newBuilder()
                             .cacheControl(CacheControl.FORCE_CACHE)
                             .build();
-                } else if (MokaUtil.isNetworkConnected(mContext) && !isUseCache) {//网络可用
+                } else if (MokaUtil.isNetworkConnected(App.getInstance()) && !isUseCache) {//网络可用
                     request = request.newBuilder()
                             .cacheControl(CacheControl.FORCE_NETWORK)
                             .build();
                 }
                 Response response = chain.proceed(request);
-                if (MokaUtil.isNetworkConnected(mContext)) {//如果网络可用
+                if (MokaUtil.isNetworkConnected(App.getInstance())) {//如果网络可用
                     response = response.newBuilder()
                             //覆盖服务器响应头的Cache-Control,用我们自己的,因为服务器响应回来的可能不支持缓存
                             .header("Cache-Control", "public,max-age=" + maxCacheTime)
@@ -131,43 +101,16 @@ class RetrofitHttpUtil {
         builder.writeTimeout(20, TimeUnit.SECONDS);
         //错误重连
         builder.retryOnConnectionFailure(true);
-        okHttpClient = builder.build();
+        return builder.build();
     }
 
-
-    private void initRetrofit() {
-        retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .client(okHttpClient)
-                .addConverterFactory(GsonConverterFactory.create())
+    protected Retrofit createRetrofit(Retrofit.Builder builder, OkHttpClient client, String url) {
+        return builder
+                .baseUrl(url)
+                .client(client)
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
-
-
-    <T> void toSubscribe(Observable<T> o, Subscriber<T> s) {
-        o.subscribeOn(Schedulers.io())
-                .unsubscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(s);
-    }
-
-
-    /**
-     * 用来统一处理Http的resultCode,并将HttpResult的Data部分剥离出来返回给subscriber
-     *
-     * @param <T> Subscriber真正需要的数据类型，也就是Data部分的数据类型
-     */
-    class ResponseBeanFunc<T> implements Func1<ResponseBean<T>, T> {
-
-        @Override
-        public T call(ResponseBean<T> responseBean) {
-            if (!responseBean.success()) {
-                throw new APIException(responseBean.getState(), responseBean.getMsg());
-            }
-            return responseBean.data;
-        }
-    }
-
 
 }

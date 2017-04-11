@@ -30,7 +30,7 @@ public abstract class BaseActivity extends AppCompatActivity implements LifeSubs
     // 管理运行的所有的activity
     public final static List<AppCompatActivity> mActivities = new LinkedList<AppCompatActivity>();
 
-    public static BaseActivity activity;
+    public static BaseActivity mContext;
 
     //一下变量用于从左边滑动到右边关闭的变量   类似ios自带的关闭效果
     private int endX;
@@ -47,12 +47,12 @@ public abstract class BaseActivity extends AppCompatActivity implements LifeSubs
     @Override
     protected void onResume() {
         super.onResume();
-        activity = this;
+        mContext = this;
     }
     @Override
     protected void onPause() {
         super.onPause();
-        activity = null;
+        mContext = null;
     }
 
     protected abstract int getLayoutId();

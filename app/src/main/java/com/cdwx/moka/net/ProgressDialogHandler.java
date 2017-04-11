@@ -6,8 +6,8 @@ import android.content.DialogInterface;
 import android.os.Handler;
 import android.os.Message;
 
-import com.mmote.mmote.R;
-import com.mmote.mmote.widget.dialog.LoadingDialog;
+import com.cdwx.moka.R;
+import com.cdwx.moka.widget.dialog.LoadingDialog;
 
 
 class ProgressDialogHandler extends Handler {

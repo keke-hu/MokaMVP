@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.cdwx.moka.net.LifeSubscription;
 import com.cdwx.moka.net.Stateful;
 import com.cdwx.moka.presenter.BasePresenter;
-import com.cdwx.moka.view.LoadingPage;
+import com.cdwx.moka.widget.LoadingPage;
 
 import javax.inject.Inject;
 

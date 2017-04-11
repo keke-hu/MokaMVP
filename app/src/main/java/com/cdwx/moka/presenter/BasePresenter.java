@@ -3,7 +3,9 @@ package com.cdwx.moka.presenter;
 
 import com.cdwx.moka.app.AppConstants;
 import com.cdwx.moka.net.LifeSubscription;
+import com.cdwx.moka.net.ProgressSubscriber;
 import com.cdwx.moka.net.Stateful;
+import com.cdwx.moka.utils.HttpUtils;
 
 import java.util.List;
 
@@ -22,9 +24,15 @@ public class BasePresenter<T extends LifeSubscription> {
     }
 
 
+    protected <T> void invoke(Observable<T> observable, ProgressSubscriber<T> callback) {
+        HttpUtils.invoke(mLifeSubscription, observable, callback);
+    }
+
+
     /**
      * 给子类检查返回集合是否为空
      * 这样子做虽然耦合度高，但是接口都不是统一定的，我们没有什么更好的办法
+     *
      * @param list
      */
     public void checkState(List list) {

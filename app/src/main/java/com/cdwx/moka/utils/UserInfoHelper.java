@@ -1,7 +1,7 @@
 package com.cdwx.moka.utils;
 
 
-import com.cdwx.moka.app.MokaApplication;
+import com.cdwx.moka.app.App;
 
 public class UserInfoHelper {
     private static final UserInfoHelper instance = new UserInfoHelper();
@@ -14,7 +14,7 @@ public class UserInfoHelper {
     }
 
     private UserInfoHelper() {
-        mHelper = new PreferencesHelper(MokaApplication.getInstance());
+        mHelper = new PreferencesHelper(App.getInstance());
     }
 
     public String getUserId() {

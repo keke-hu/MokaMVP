@@ -1,4 +1,4 @@
-package com.cdwx.moka.view;
+package com.cdwx.moka.widget;
 
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
@@ -51,7 +51,7 @@ public abstract class LoadingPage extends FrameLayout {
 
 
     private void init() {
-        this.setBackgroundColor(getResources().getColor(R.color.colorPageBg));
+        this.setBackgroundColor(getResources().getColor(R.color.color_11));
         //把loadingView添加到frameLayout上
         if (loadingView == null) {
             loadingView = createLoadingView();

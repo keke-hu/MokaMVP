@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:background="@drawable/loading_background"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/iv_circle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/quan" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/xiao" />
+
+</FrameLayout>

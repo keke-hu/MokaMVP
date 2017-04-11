@@ -1,5 +1,6 @@
 package com.cdwx.moka.net;
 
+import com.cdwx.moka.model.MainInfoBean;
 import com.cdwx.moka.model.ResponseBean;
 
 import okhttp3.ResponseBody;
@@ -14,10 +15,10 @@ import rx.Observable;
 /**
  * 具体的网络请求
  */
-interface APIService {
+public interface APIService {
     @FormUrlEncoded
-    @POST("user/login")
-    Observable<ResponseBean> login(@Field("data") String data);//登录
+    @POST("main/index")
+    Observable<MainInfoBean> fetchMainInfoData(@Field("data") String data);//主页
 
     @GET
     Call<ResponseBody> loadFile(@Url String fileUrl);//下载文件

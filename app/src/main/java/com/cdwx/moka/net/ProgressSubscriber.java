@@ -2,8 +2,9 @@ package com.cdwx.moka.net;
 
 import android.content.Context;
 
-import com.mmote.mmote.constants.MmoteConstants;
-import com.mmote.mmote.exception.APIException;
+
+import com.cdwx.moka.app.AppConstants;
+import com.cdwx.moka.exception.APIException;
 
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
@@ -17,6 +18,11 @@ import rx.Subscriber;
  * Created by hjzhang on 16/7/26.
  */
 public class ProgressSubscriber<T> extends Subscriber<T> implements ProgressCancelListener {
+    private Stateful target;
+
+    public void setTarget(Stateful target) {
+        this.target = target;
+    }
 
     private OnResponseListener<T> mOnResponseListener;
     private ProgressDialogHandler mProgressDialogHandler;
@@ -66,11 +72,11 @@ public class ProgressSubscriber<T> extends Subscriber<T> implements ProgressCanc
     public void onError(Throwable e) {
         if (e instanceof SocketTimeoutException) {
             if (mOnResponseListener != null) {
-                mOnResponseListener.onError(MmoteConstants.NETERROR, "网络中断，请检查您的网络状态");
+                mOnResponseListener.onError(AppConstants.NETERROR, "网络中断，请检查您的网络状态");
             }
         } else if (e instanceof ConnectException) {
             if (mOnResponseListener != null) {
-                mOnResponseListener.onError(MmoteConstants.NETERROR, "网络中断，请检查您的网络状态");
+                mOnResponseListener.onError(AppConstants.NETERROR, "网络中断，请检查您的网络状态");
             }
         } else if (e instanceof APIException) {
             if (mOnResponseListener != null) {
@@ -78,7 +84,7 @@ public class ProgressSubscriber<T> extends Subscriber<T> implements ProgressCanc
             }
         } else {
             if (mOnResponseListener != null) {
-                mOnResponseListener.onError(MmoteConstants.UNKONWERROR, e.getMessage());
+                mOnResponseListener.onError(AppConstants.UNKONWERROR, e.getMessage());
             }
         }
         dismissProgressDialog();

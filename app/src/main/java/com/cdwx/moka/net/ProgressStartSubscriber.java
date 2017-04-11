@@ -2,8 +2,9 @@ package com.cdwx.moka.net;
 
 import android.content.Context;
 
-import com.mmote.mmote.constants.MmoteConstants;
-import com.mmote.mmote.exception.APIException;
+
+import com.cdwx.moka.app.AppConstants;
+import com.cdwx.moka.exception.APIException;
 
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
@@ -68,11 +69,11 @@ public class ProgressStartSubscriber <T> extends Subscriber<T> implements Progre
     public void onError(Throwable e) {
         if (e instanceof SocketTimeoutException) {
             if (mOnStartResponseListenern != null) {
-                mOnStartResponseListenern.onError(MmoteConstants.NETERROR, "网络中断，请检查您的网络状态");
+                mOnStartResponseListenern.onError(AppConstants.NETERROR, "网络中断，请检查您的网络状态");
             }
         } else if (e instanceof ConnectException) {
             if (mOnStartResponseListenern != null) {
-                mOnStartResponseListenern.onError(MmoteConstants.NETERROR, "网络中断，请检查您的网络状态");
+                mOnStartResponseListenern.onError(AppConstants.NETERROR, "网络中断，请检查您的网络状态");
             }
         } else if (e instanceof APIException) {
             if (mOnStartResponseListenern != null) {
@@ -80,7 +81,7 @@ public class ProgressStartSubscriber <T> extends Subscriber<T> implements Progre
             }
         } else {
             if (mOnStartResponseListenern != null) {
-                mOnStartResponseListenern.onError(MmoteConstants.UNKONWERROR, e.getMessage());
+                mOnStartResponseListenern.onError(AppConstants.UNKONWERROR, e.getMessage());
             }
         }
         dismissProgressDialog();
